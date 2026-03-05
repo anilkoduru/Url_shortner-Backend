@@ -9,11 +9,13 @@ import redis
 import json
 import os
 from typing import Optional
+from dotenv import load_dotenv
 
-MONGODB_URI = os.getenv(
-    "MONGODB_URI",
-    "mongodb+srv://anilkoduru27_db_user:lZGlirH8HIOFc7gs@cluster0.l9o0yme.mongodb.net/?appName=Cluster0"
-)
+load_dotenv()
+
+MONGODB_URI = os.getenv("MONGODB_URI")
+if not MONGODB_URI:
+    raise ValueError("MONGODB_URI environment variable is required!")
 
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
