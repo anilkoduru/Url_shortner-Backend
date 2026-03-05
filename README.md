@@ -13,7 +13,7 @@ A simple, fast URL shortener built with FastAPI, Redis, and MongoDB.
 ### Requirements
 - Python 3.8+
 - MongoDB Atlas account
-- Redis (Docker or cloud)
+- Redis (Docker)
 
 ### Install & Run
 
@@ -69,9 +69,6 @@ REDIS_DB=0
 - **MongoDB Atlas** - Database
 - **Uvicorn** - ASGI server
 
-## Deployment
-
-See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for production deployment options.
 
 ## Testing
 
